@@ -1,2 +1,7 @@
 # BacteriaCommunityEcoEvoModel
-Code from Barraclough 2019 "Species matter for predicting the functioning of evolving microbial communities – an eco-evolutionary model". The code is written in R and suitable for running within a high performance computing framework. 
+Code from Barraclough 2019 "Species matter for predicting the functioning of evolving microbial communities – an eco-evolutionary model". https://www.biorxiv.org/content/10.1101/666685v1
+The code is written in R and suitable for running either locally or within a high performance computing framework.
+
+The basic model is set up to run a system with 4 species and 5 substrates, chosen to demonstrate how a pathway with linear steps, branching and converging steps can be specified. It does a single run and plots out enzyme allocations, species densities and substrate concentrations to a folder named with the current time. It comes in three files: run.basic.model.R is the file with parameter set up and that calls the model to run and plots it at the end, it includes annotations to explain what each part does; main.v4.R contains functions for the model and is sourced by run.basic.model.R; plot.model.R has code for making the plots and is sourced by run.basic.model.R. Download all 3 files into a folder, set the working directory in R, and then paste in code from run.basic.model.R to run the model. 
+
+Code to run the simplified gut model described in the manuscript is also provided, in a file containing all functions suitable for submitting to a high performance computing cluster. It is recommended that users start with this basic model and familiarise themselves with adjusting the set-up in there before attempting to run the more complex model.
